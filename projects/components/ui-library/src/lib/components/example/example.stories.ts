@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { UiButton } from './ui-button.component';
+import { Example } from './example.component';
 
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
-const meta: Meta<UiButton> = {
-  title: 'UI/UiButton',
-  component: UiButton,
+const meta: Meta<Example> = {
+  title: 'UI/Example',
+  component: Example,
   tags: ['autodocs']
 };
 
 export default meta;
-type Story = StoryObj<UiButton>;
+type Story = StoryObj<Example>;
 
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const Default: Story = {

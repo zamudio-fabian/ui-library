@@ -1,7 +1,7 @@
 ---
 to: projects/components/ui-library/src/lib/components/<%= h.changeCase.param(name) %>/<%= h.changeCase.param(name) %>.component.ts
 ---
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: '<%= h.changeCase.param(name) %>',
