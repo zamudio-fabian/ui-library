@@ -23,13 +23,13 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Setup .npmrc
-        run: echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> .npmrc
+        run: echo '//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}' >> .npmrc
       - name: Ignore .npmrc changes in git
         run: git update-index --assume-unchanged .npmrc
       - name: Publish packages
         run: yarn publish:all
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   update-storybook:
     runs-on: ubuntu-latest
